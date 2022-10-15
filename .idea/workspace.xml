@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating the welcome page&#10;&#10;Added templates and urls to start the welcome page. There is a base template that the welcome page inherits from.">
-      <change afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating the contact page&#10;&#10;Added templates and urls to start the contact page. There is a base template that the contact page inherits from.">
+      <change afterPath="$PROJECT_DIR$/projectsite/blog/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/blog/templates/blog/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/projectsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/projectsite/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -34,14 +37,14 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Sinead Marie/Year 2/COM2025/COM2025_CW"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sinead Marie/Year 2/COM2025/COM2025_CW&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665746739100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creating the contact page&#10;&#10;Added templates and urls to start the contact page. There is a base template that the contact page inherits from.">
+      <created>1665748241775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665748241775</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,6 +84,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creating the welcome page&#10;&#10;Added templates and urls to start the welcome page. There is a base template that the welcome page inherits from." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the welcome page&#10;&#10;Added templates and urls to start the welcome page. There is a base template that the welcome page inherits from." />
+    <MESSAGE value="Creating the contact page&#10;&#10;Added templates and urls to start the contact page. There is a base template that the contact page inherits from." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the contact page&#10;&#10;Added templates and urls to start the contact page. There is a base template that the contact page inherits from." />
   </component>
 </project>
