@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating a project app">
-      <change afterPath="$PROJECT_DIR$/projectsite/users/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projectsite/users/templates/users/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projectsite/users/templates/users/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projectsite/users/templates/users/register.html" afterDir="false" />
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating the register and login page&#10;&#10;Added templates and urls to start the register and login page. There is a base template that the pages inherits from. Also, added a profile page that is displayed when the user is logged in.">
+      <change afterPath="$PROJECT_DIR$/projectsite/media/profile_pics/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectsite/users/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectsite/users/templates/users/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/COM2025_CW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COM2025_CW.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/projectsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/projectsite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/projectsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/projectsite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/templates/users/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +43,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sinead Marie/Year 2/COM2025/COM2025_CW&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Sinead Marie/Year 2/COM2025/COM2025_CW/projectsite/media/profile_pics"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sinead Marie\Year 2\COM2025\COM2025_CW\projectsite\media\profile_pics" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665859912816</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creating the register and login page&#10;&#10;Added templates and urls to start the register and login page. There is a base template that the pages inherits from. Also, added a profile page that is displayed when the user is logged in.">
+      <created>1665865821281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665865821284</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +119,7 @@
     <MESSAGE value="Creating the contact page&#10;&#10;Added templates and urls to start the contact page. There is a base template that the contact page inherits from." />
     <MESSAGE value="Completing the contact page&#10;&#10;Completed the contact page by adding forms, models and creating a view." />
     <MESSAGE value="Creating a project app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating a project app" />
+    <MESSAGE value="Creating the register and login page&#10;&#10;Added templates and urls to start the register and login page. There is a base template that the pages inherits from. Also, added a profile page that is displayed when the user is logged in." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the register and login page&#10;&#10;Added templates and urls to start the register and login page. There is a base template that the pages inherits from. Also, added a profile page that is displayed when the user is logged in." />
   </component>
 </project>
