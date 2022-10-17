@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
 
 GENRE_CHOICES = (
     ("afrobeats", "AFROBEATS"),
@@ -26,23 +28,25 @@ GENRE_CHOICES = (
 )
 
 
-# Create your models here.
-class Album(models.Model):
-    artist = models.CharField(max_length=250)
-    album_title = models.CharField(max_length=500)
-    genre = models.CharField(max_length=16, choices=GENRE_CHOICES, default='genre')
-    album_photo = models.ImageField(default='placeholder-image.png', upload_to='album_pics')
-
-    def __str__(self):
-        return f"{self.album_title} - {self.artist}"
-
-
-
-
+# Create your models here
 class Song(models.Model):
-    album = models.ForeignKey(Album)
+    artist = models.CharField(max_length=250)
+    genre = models.CharField(max_length=16, choices=GENRE_CHOICES, default='genre')
     song_title = models.CharField(max_length=250)
+    album_title = models.CharField(max_length=500)
     is_favourite = models.BooleanField(default=False)
 
     def __str__(self):
         return self.song_title
+
+
+class Playlist(models.Model):
+    list_title = models.CharField(max_length=500)
+    description = models.TextField()
+    creator = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_created = models.DateTimeField(default=timezone.now)
+    songs = models.ManyToManyField(Song)
+    image = models.ImageField(default='default.jpg', upload_to='playlist_pics')
+
+    def __str__(self):
+        return self.list_title

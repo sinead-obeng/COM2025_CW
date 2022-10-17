@@ -37,8 +37,8 @@
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
                         {% if user.is_authenticated %}
-                            <a class="nav-item nav-link" href="{% url 'music-playlist' %}">My Playlist</a>
-                            <a class="nav-item nav-link" href="#">Favourites</a>
+                            <a class="nav-item nav-link" href="{% url 'music-playlist' %}">My Playlists</a>
+                            <a class="nav-item nav-link" href="#">My Favourites</a>
                             <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                             <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                         {% else %}

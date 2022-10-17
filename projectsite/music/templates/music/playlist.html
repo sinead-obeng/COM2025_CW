@@ -1,6 +1,20 @@
 {% extends "blog/base.html" %}
 {% block content %}
     <h1>My Playlists</h1>
+    {% for playlist in playlists %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ playlist.list_title }}</a>
+                </div>
+                <h2><a class="article-title" href="#">{{ playlist.date_created }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
     <article class="media content-section">
+        <div class="media-body">
+            <a href="{% url 'music-create_playlist' %}">Add Playlist</a>
+        </div>
     </article>
 {% endblock content %}
