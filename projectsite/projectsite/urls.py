@@ -36,6 +36,7 @@ urlpatterns = [
         name="logout",
     ),
     path("", include("blog.urls")),
+    path("", include("music.urls")),
 ]
 
 
