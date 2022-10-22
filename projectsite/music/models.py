@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -5,12 +6,12 @@ from django.contrib.auth.models import User
 GENRE_CHOICES = (
     ("afrobeats", "AFROBEATS"),
     ("afrovibes", "AFROVIBES"),
-    ("alternative","ALTERNATIVE"),
+    ("alternative", "ALTERNATIVE"),
     ("anime", "ANIME"),
     ("bashment", "BASHMENT"),
-    ("blues","BLUES"),
-    ("children's music","CHILDREN'S MUSIC"),
-    ("classical","CLASSICAL"),
+    ("blues", "BLUES"),
+    ("children's music", "CHILDREN'S MUSIC"),
+    ("classical", "CLASSICAL"),
     ("country", "COUNTRY"),
     ("dance", "DANCE"),
     ("dancehall", "DANCEHALL"),
@@ -31,7 +32,7 @@ GENRE_CHOICES = (
 # Create your models here
 class Song(models.Model):
     artist = models.CharField(max_length=250)
-    genre = models.CharField(max_length=16, choices=GENRE_CHOICES, default='genre')
+    genre = models.CharField(max_length=16, choices=GENRE_CHOICES, default="genre")
     song_title = models.CharField(max_length=250)
     album_title = models.CharField(max_length=500)
     is_favourite = models.BooleanField(default=False)
@@ -41,12 +42,15 @@ class Song(models.Model):
 
 
 class Playlist(models.Model):
+    User = settings.AUTH_USER_MODEL
     list_title = models.CharField(max_length=500)
-    description = models.TextField()
-    creator = models.ForeignKey(User, on_delete=models.CASCADE)
+    description = models.TextField(blank=True)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     date_created = models.DateTimeField(default=timezone.now)
-    songs = models.ManyToManyField(Song)
-    image = models.ImageField(default='default.jpg', upload_to='playlist_pics')
+    songs = models.ManyToManyField(Song, blank=True)
+    image = models.ImageField(
+        default="placeholder-image.jpg", upload_to="playlist_pics"
+    )
 
     def __str__(self):
         return self.list_title

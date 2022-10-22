@@ -1,17 +1,19 @@
 {% extends "blog/base.html" %}
 {% block content %}
     <h1>My Playlists</h1>
-    {% for playlist in playlists %}
-        <article class="media content-section">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="#">{{ playlist.list_title }}</a>
-                </div>
-                <h2><a class="article-title" href="#">{{ playlist.date_created }}</a></h2>
-                <p class="article-content">{{ post.content }}</p>
-            </div>
-        </article>
-    {% endfor %}
+        {% for playlist in playlists %}
+            {% if playlist.creator == user %}
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <p class="mr-2" style="text-align:left">{{ playlist.date_created|date:"jS F Y"  }}</p>
+                        </div>
+                        <h2><a class="article-title" href="#">{{ playlist.list_title }}</a></h2>
+                        <small class="text-muted">{{ playlist.description }}</small>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
     <article class="media content-section">
         <div class="media-body">
             <a href="{% url 'music-create_playlist' %}">Add Playlist</a>
