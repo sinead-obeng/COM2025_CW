@@ -1,10 +1,12 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 from .forms import CreatePlaylistForm
 from .models import Playlist
+from blog.models import Post
 
 
 # Create your views here.
@@ -26,6 +28,13 @@ def create_playlist(request):
             image=request.POST['image']
         )
         ins.save()
+        ins2 = Post(
+            title="New playlist created.",
+            content=f"You created a playlist called {request.POST['list_title']}.",
+            date_posted=timezone.now(),
+            author=request.user
+        )
+        ins2.save()
         messages.success(
             request,
             f"Playlist '{request.POST['list_title']}' created!",

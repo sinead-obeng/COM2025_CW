@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating the add playlist page">
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Completing the add playlist page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/music/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/music/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/music/templates/music/playlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/templates/music/playlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/music/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666044195609</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Completing the add playlist page">
+      <created>1666448329389</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666448329389</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +172,7 @@
     <MESSAGE value="Creating a project app" />
     <MESSAGE value="Creating the playlist page" />
     <MESSAGE value="Creating the add playlist page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the add playlist page" />
+    <MESSAGE value="Completing the add playlist page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completing the add playlist page" />
   </component>
 </project>
