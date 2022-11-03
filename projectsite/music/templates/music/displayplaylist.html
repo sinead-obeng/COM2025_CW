@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="content-section">
+    <a href="{% url 'music-playlist' %}">< Back to my playlists</a>
+    <h1>{{ object.list_title }}</h1>
+    <p>{{ object.description }}</p>
+</div>
+{% endblock content %}

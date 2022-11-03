@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Adds an event on the welcome page&#10;&#10;An event is added for when the user creates a new playlist.">
-      <change afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/about.html" afterDir="false" />
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating an about page">
+      <change afterPath="$PROJECT_DIR$/projectsite/music/templates/music/displayplaylist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/templates/blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/templates/blog/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/projectsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/projectsite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0002_auto_20221017_2257.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0003_auto_20221022_1345.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0004_auto_20221022_1402.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0005_rename_user_playlist_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0006_alter_playlist_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/templates/music/playlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/templates/music/playlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666454660908</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Creating an about page">
+      <created>1667476657080</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667476657080</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +196,7 @@
     <MESSAGE value="Creating the add playlist page" />
     <MESSAGE value="Completing the add playlist page" />
     <MESSAGE value="Adds an event on the welcome page&#10;&#10;An event is added for when the user creates a new playlist." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds an event on the welcome page&#10;&#10;An event is added for when the user creates a new playlist." />
+    <MESSAGE value="Creating an about page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating an about page" />
   </component>
 </project>

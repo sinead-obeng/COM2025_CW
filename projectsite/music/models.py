@@ -1,7 +1,7 @@
 from django.conf import settings
+from django.urls import reverse
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
 
 GENRE_CHOICES = (
     ("afrobeats", "AFROBEATS"),
@@ -30,7 +30,22 @@ GENRE_CHOICES = (
 
 
 # Create your models here
+class Playlist(models.Model):
+    User = settings.AUTH_USER_MODEL
+    list_title = models.CharField(max_length=500)
+    description = models.TextField(blank=True)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    date_created = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(
+        default="placeholder-image.jpg", upload_to="playlist_pics"
+    )
+
+    def __str__(self):
+        return self.list_title
+
+
 class Song(models.Model):
+    playlist = models.ForeignKey(Playlist, on_delete=models.CASCADE, default="playlist")
     artist = models.CharField(max_length=250)
     genre = models.CharField(max_length=16, choices=GENRE_CHOICES, default="genre")
     song_title = models.CharField(max_length=250)
@@ -39,18 +54,3 @@ class Song(models.Model):
 
     def __str__(self):
         return self.song_title
-
-
-class Playlist(models.Model):
-    User = settings.AUTH_USER_MODEL
-    list_title = models.CharField(max_length=500)
-    description = models.TextField(blank=True)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    date_created = models.DateTimeField(default=timezone.now)
-    songs = models.ManyToManyField(Song, blank=True)
-    image = models.ImageField(
-        default="placeholder-image.jpg", upload_to="playlist_pics"
-    )
-
-    def __str__(self):
-        return self.list_title

@@ -8,7 +8,7 @@
                         <div class="article-metadata">
                             <p class="mr-2" style="text-align:left">{{ playlist.date_created|date:"jS F Y"  }}</p>
                         </div>
-                        <h2><a class="article-title" href="#">{{ playlist.list_title }}</a></h2>
+                        <h2><a class="article-title" href="{% url 'music-display_playlist' playlist.id %}">{{ playlist.list_title }}</a></h2>
                         <small class="text-muted">{{ playlist.description }}</small>
                     </div>
                 </article>
@@ -20,3 +20,10 @@
         </div>
     </article>
 {% endblock content %}
+{% block js %}
+    <script>
+        $('a').click(function () {
+            alert('Link was clicked.')
+        });
+    </script>
+{% endblock %}
