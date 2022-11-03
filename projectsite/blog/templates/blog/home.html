@@ -1,6 +1,9 @@
 {% extends "blog/base.html" %}
 {% block content %}
-    <h1>Welcome</h1>
+    <div class="content-section">
+        <h1>Welcome</h1>
+        <p>Here will be a timeline of what playlists you have created, or what songs you have recently added.</p>
+    </div>
     {% for post in posts %}
         <article class="media content-section">
             <div class="media-body">
