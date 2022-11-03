@@ -1,8 +1,18 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<div class="content-section">
-    <a href="{% url 'music-playlist' %}">< Back to my playlists</a>
-    <h1>{{ object.list_title }}</h1>
-    <p>{{ object.description }}</p>
-</div>
+    <div class="content-section">
+        <a href="{% url 'music-playlist' %}">< Back to my playlists</a>
+        <h1>{{ object.list_title }}</h1>
+        <p>{{ object.description }}</p>
+    </div>
+    <article class="media content-section">
+        <div class="media-body">
+            <a href="{% url 'music-add_song' %}">Add Song</a>
+        </div>
+    </article>
+    {% for song in songs %}
+        {% if song.playlist == object.list_title %}
+        {% endif %}
+    {% endfor %}
+
 {% endblock content %}

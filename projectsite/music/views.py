@@ -51,3 +51,9 @@ class PlaylistDetailView(DetailView):
     template_name = 'music/displayplaylist.html'
 
 
+
+def add_song(request):
+    context = {
+        'playlists': Playlist.objects.all(),
+    }
+    return render(request, 'music/addsong.html', context)
