@@ -3,5 +3,15 @@
 {% block content %}
     <div class="content-section">
         <h1>Add Song</h1>
+        <a href="#">< Back to my playlist</a>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">ADD</button>
+            </div>
+        </form>
     </div>
 {% endblock content %}

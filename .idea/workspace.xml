@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating the display playlist page">
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Creating the add song page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/music/templates/music/addsong.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/templates/music/addsong.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/music/templates/music/displayplaylist.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/templates/music/displayplaylist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/music/templates/music/playlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/templates/music/playlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/music/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/music/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667483885835</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Creating the add song page">
+      <created>1667485773079</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667485773079</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +209,7 @@
     <MESSAGE value="Adds an event on the welcome page&#10;&#10;An event is added for when the user creates a new playlist." />
     <MESSAGE value="Creating an about page" />
     <MESSAGE value="Creating the display playlist page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the display playlist page" />
+    <MESSAGE value="Creating the add song page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the add song page" />
   </component>
 </project>

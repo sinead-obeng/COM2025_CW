@@ -2,17 +2,36 @@
 {% block content %}
     <div class="content-section">
         <a href="{% url 'music-playlist' %}">< Back to my playlists</a>
+        <br>
+        <img class=" account-img" src="{{ object.image.url }}">
         <h1>{{ object.list_title }}</h1>
         <p>{{ object.description }}</p>
     </div>
     <article class="media content-section">
         <div class="media-body">
-            <a href="{% url 'music-add_song' %}">Add Song</a>
+            <a href="{% url 'music-add_song' object.id %}">Add Song</a>
         </div>
     </article>
-    {% for song in songs %}
-        {% if song.playlist == object.list_title %}
-        {% endif %}
-    {% endfor %}
-
+    {% if songs %}
+        <div class="content-section">
+            <table style="width:100%">
+                <tr style="border-bottom:1px solid grey;">
+                    <th>#</th>
+                    <th>TITLE</th>
+                    <th>ALBUM</th>
+                    <th>DATE ADDED</th>
+                    <th>DURATION</th>
+                </tr>
+                {% for song in songs %}
+                        <tr>
+                            <td></td>
+                            <td>{{ song.song_title }} <br> {{ song.artist }}</td>
+                            <td>{{ song.album_title }}</td>
+                            <td>{{ song.date_added|date:"M n, Y" }}</td>
+                            <td>{{ song.duration }}</td>
+                        </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
 {% endblock content %}

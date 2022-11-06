@@ -10,7 +10,7 @@ class Profile(models.Model):
     forename = models.CharField(max_length=100, default="default")
     surname = models.CharField(max_length=100, default="default")
     email = models.EmailField(default="default@email.com")
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.ImageField(default='default.jpg', upload_to='profile_pics/')
 
     def __str__(self):
         return f"{self.user.username}'s Profile"
