@@ -8,7 +8,6 @@ class UserModelTests(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        User.objects.all().delete()
         u1 = User.objects.create_user(username="testuser1", password="12345")
         u1.save()
         u2 = User.objects.create_user(username="testuser2", password="12345")

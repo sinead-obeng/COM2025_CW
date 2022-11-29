@@ -41,7 +41,7 @@ class Playlist(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
     date_created = models.DateTimeField(default=timezone.now)
     image = models.ImageField(
-        default="placeholder-image.jpg", upload_to="playlist_pics/"
+        default="placeholder-image.png", upload_to="playlist_pics/"
     )
 
     def __str__(self):
