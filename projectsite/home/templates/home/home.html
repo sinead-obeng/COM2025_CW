@@ -1,0 +1,26 @@
+{% extends "home/base.html" %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="content-section">
+            <h1>Welcome</h1>
+            <p>Here will be a timeline of what playlists you have created, or what songs you have recently added.</p>
+        </div>
+        {% for post in posts %}
+            <article class="media content-section">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="#">{{ post.author }}</a>
+                        <small class="text-muted">{{ post.date_posted|date:"l, jS F Y" }}</small>
+                    </div>
+                    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                    <p class="article-content">{{ post.content }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    {% else %}
+        <div class="content-section">
+            <h1>Welcome</h1>
+            <p>Log in to see a timeline of what playlists you have created, or what songs you have recently added.</p>
+        </div>
+    {% endif %}
+{% endblock content %}

@@ -10,11 +10,11 @@ def home(request):
     context = {
         'posts': Post.objects.all()
     }
-    return render(request, "blog/home.html", context)
+    return render(request, "home/home.html", context)
 
 
 def about(request):
-    return render(request, "blog/about.html")
+    return render(request, "home/about.html")
 
 
 def contact(request):
@@ -29,7 +29,7 @@ def contact(request):
                 request,
                 "Thank you for your inquiry! Your contact information and message was successfully submitted.",
             )
-            return redirect("blog-contact")
+            return redirect("home-contact")
     else:
         form = ContactForm()
-    return render(request, "blog/contact.html", {"form": form})
+    return render(request, "home/contact.html", {"form": form})

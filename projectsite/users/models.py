@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.validators import ASCIIUsernameValidator
 from PIL import Image
 
 
 # Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    username = models.CharField(max_length=255, default="default")
+    username = models.CharField(max_length=255, default="default", validators=[ASCIIUsernameValidator])
     forename = models.CharField(max_length=100, default="default")
     surname = models.CharField(max_length=100, default="default")
     email = models.EmailField(default="default@email.com")

@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
+    'home.apps.HomeConfig',
     'users.apps.UsersConfig',
     'music.apps.MusicConfig',
     'crispy_forms',
@@ -129,7 +129,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_REDIRECT_URL = 'home-home'
 LOGIN_URL = 'login'
 
 # Default primary key field type

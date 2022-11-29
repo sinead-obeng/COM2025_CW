@@ -8,7 +8,7 @@ from django.views.generic import CreateView, DetailView
 
 from .forms import CreatePlaylistForm, AddSongForm
 from .models import Playlist, Song
-from blog.models import Post
+from home.models import Post
 
 
 # Create your views here.
