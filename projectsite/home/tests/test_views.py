@@ -1,3 +1,4 @@
+from django.core import mail
 from django.test import TestCase, Client
 from django.urls import reverse
 
@@ -32,3 +33,11 @@ class HomeViewTests(TestCase):
 
         self.assertEquals(response.status_code, 200)
         self.assertContains(response, '<h1>Contact Us</h1>')
+
+    def test_send_email(self):
+        mail.send_mail('Test subject here', 'Here is the test message.',
+                       'from.testuser1@email.com', ['to@example.com'],
+                       fail_silently=False)
+
+        self.assertEqual(1, len(mail.outbox))
+        self.assertEqual(mail.outbox[0].subject, 'Test subject here')

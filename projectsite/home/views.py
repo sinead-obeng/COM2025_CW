@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
@@ -29,6 +30,7 @@ def contact(request):
                 request,
                 "Thank you for your inquiry! Your contact information and message was successfully submitted.",
             )
+            send_mail(subject, message, email, ['sinead.obeng@gmail.com'])
             return redirect("home-contact")
     else:
         form = ContactForm()
