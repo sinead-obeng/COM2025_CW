@@ -137,3 +137,13 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+i.fa {
+    color: #0099cc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+    transform: scale(1.25);
+}

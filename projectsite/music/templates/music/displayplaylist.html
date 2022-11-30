@@ -20,6 +20,7 @@
                     <th>TITLE</th>
                     <th>ALBUM</th>
                     <th>DATE ADDED</th>
+                    <th></th>
                     <th>DURATION</th>
                 </tr>
                 {% for song in songs %}
@@ -28,10 +29,16 @@
                             <td>{{ song.song_title }} <br> {{ song.artist }}</td>
                             <td>{{ song.album_title }}</td>
                             <td>{{ song.date_added|date:"M n, Y" }}</td>
+                            <td><i onclick="myFunction(this)" class="fa fa-heart"></i></td>
                             <td>{{ song.duration }}</td>
                         </tr>
                 {% endfor %}
             </table>
+            <script>
+                function myFunction(x) {
+                  x.classList.toggle("fa-heart-o");
+                }
+            </script>
         </div>
     {% endif %}
 {% endblock content %}
