@@ -22,16 +22,10 @@ def playlist(request):
 
 def create_playlist(request):
     if request.method == "POST":
-        image = request.POST["image"]
-        if image == "":
-            image = "placeholder-image.png"
-        ins = Playlist(
-            list_title=request.POST["list_title"],
-            description=request.POST["description"],
-            creator=request.user,
-            image="playlist_pics/" + image,
-        )
-        ins.save()
+        creator = Playlist(creator=request.user)
+        form = CreatePlaylistForm(request.POST, request.FILES, instance=creator)
+        if form.is_valid():
+            form.save()
         ins2 = Post(
             title="New playlist created.",
             content=f"You created a playlist called {request.POST['list_title']}.",

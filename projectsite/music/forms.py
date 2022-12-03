@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Playlist, Song
+from django.conf import settings
 
 GENRE_CHOICES = (
     ("afrobeats", "Afrobeats"),
@@ -44,6 +45,7 @@ class CreatePlaylistForm(ModelForm):
             "description",
             "image",
         ]
+        exclude = ('creator',)
 
 
 class AddSongForm(ModelForm):
