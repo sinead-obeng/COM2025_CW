@@ -45,7 +45,7 @@ class CreatePlaylistForm(ModelForm):
             "description",
             "image",
         ]
-        exclude = ('creator',)
+        exclude = ("creator",)
 
 
 class AddSongForm(ModelForm):

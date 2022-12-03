@@ -58,7 +58,10 @@ class Playlist(models.Model):
             img.save(self.image.path)
 
     def get_absolute_url(self):
-        return reverse('music-display_playlist', kwargs={'pk': Playlist.objects.get(pk=self.kwargs.get('pk')).pk})
+        return reverse(
+            "music-display_playlist",
+            kwargs={"pk": Playlist.objects.get(pk=self.kwargs.get("pk")).pk},
+        )
 
 
 class Song(models.Model):

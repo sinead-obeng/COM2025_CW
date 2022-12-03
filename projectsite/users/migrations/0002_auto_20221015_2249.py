@@ -6,28 +6,28 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0001_initial'),
+        ("users", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='profile',
-            name='email',
-            field=models.EmailField(default='default@email.com', max_length=254),
+            model_name="profile",
+            name="email",
+            field=models.EmailField(default="default@email.com", max_length=254),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='forename',
-            field=models.CharField(default='default', max_length=100),
+            model_name="profile",
+            name="forename",
+            field=models.CharField(default="default", max_length=100),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='surname',
-            field=models.CharField(default='default', max_length=100),
+            model_name="profile",
+            name="surname",
+            field=models.CharField(default="default", max_length=100),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='username',
-            field=models.CharField(default='default', max_length=255),
+            model_name="profile",
+            name="username",
+            field=models.CharField(default="default", max_length=255),
         ),
     ]

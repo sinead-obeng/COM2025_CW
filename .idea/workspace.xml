@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Create Favourites model">
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Adding forgot password page, view and form">
       <change afterPath="$PROJECT_DIR$/projectsite/users/templates/users/forgot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/db.sqlite3" afterDir="false" />
@@ -286,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670086356169</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding forgot password page, view and form">
+      <created>1670094850571</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670094850571</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,6 +330,7 @@
     <MESSAGE value="Added a mailer and tests for the mailer" />
     <MESSAGE value="Fix ups and touch ups" />
     <MESSAGE value="Create Favourites model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Favourites model" />
+    <MESSAGE value="Adding forgot password page, view and form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding forgot password page, view and form" />
   </component>
 </project>

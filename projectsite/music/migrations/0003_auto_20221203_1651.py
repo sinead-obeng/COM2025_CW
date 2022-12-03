@@ -7,20 +7,35 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('music', '0002_alter_playlist_image'),
+        ("music", "0002_alter_playlist_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='playlist',
-            name='image',
-            field=models.ImageField(default='placeholder-image.png', upload_to='playlist_pics/'),
+            model_name="playlist",
+            name="image",
+            field=models.ImageField(
+                default="placeholder-image.png", upload_to="playlist_pics/"
+            ),
         ),
         migrations.CreateModel(
-            name='Favourites',
+            name="Favourites",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('song_title', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='music.song')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "song_title",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="music.song"
+                    ),
+                ),
             ],
         ),
     ]

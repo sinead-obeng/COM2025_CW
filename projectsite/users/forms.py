@@ -19,15 +19,22 @@ class UserRegisterForm(UserCreationForm):
             "password2",
         ]
 
-    field_order = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2']
+    field_order = [
+        "first_name",
+        "last_name",
+        "username",
+        "email",
+        "password1",
+        "password2",
+    ]
 
     def clean_password2(self):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError(
-                self.error_messages['password_mismatch'],
-                code='password_mismatch',
+                self.error_messages["password_mismatch"],
+                code="password_mismatch",
             )
         return password2
 
@@ -37,18 +44,19 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'email']
+        fields = ["first_name", "last_name", "username", "email"]
 
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['image']
+        fields = ["image"]
 
 
 def get_users(email):
     active_users = get_user_model()._default_manager.filter(
-        email__iexact=email, is_active=True)
+        email__iexact=email, is_active=True
+    )
     return (u for u in active_users if u.has_usable_password())
 
 

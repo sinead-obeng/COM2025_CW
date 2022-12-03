@@ -5,7 +5,6 @@ from users.models import Profile
 
 # Create your tests here.
 class UserModelTests(TestCase):
-
     @classmethod
     def setUpTestData(cls):
         u1 = User.objects.create_user(username="testuser1", password="12345")

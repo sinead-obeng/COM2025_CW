@@ -8,9 +8,7 @@ from .forms import ContactForm
 
 # Create your views here.
 def home(request):
-    context = {
-        'posts': Post.objects.all()
-    }
+    context = {"posts": Post.objects.all()}
     return render(request, "home/home.html", context)
 
 
@@ -30,7 +28,7 @@ def contact(request):
                 request,
                 "Thank you for your inquiry! Your contact information and message was successfully submitted.",
             )
-            send_mail(subject, message, email, ['sinead.obeng@gmail.com'])
+            send_mail(subject, message, email, ["sinead.obeng@gmail.com"])
             return redirect("home-contact")
     else:
         form = ContactForm()

@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('music', '0001_initial'),
+        ("music", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='playlist',
-            name='image',
-            field=models.ImageField(default='placeholder-image.jpg', upload_to='playlist_pics/'),
+            model_name="playlist",
+            name="image",
+            field=models.ImageField(
+                default="placeholder-image.jpg", upload_to="playlist_pics/"
+            ),
         ),
     ]

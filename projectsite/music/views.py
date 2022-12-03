@@ -49,7 +49,9 @@ class PlaylistDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["songs"] = Song.objects.filter(playlist=Playlist.objects.get(pk=self.kwargs.get("pk")).list_title)
+        context["songs"] = Song.objects.filter(
+            playlist=Playlist.objects.get(pk=self.kwargs.get("pk")).list_title
+        )
         return context
 
 

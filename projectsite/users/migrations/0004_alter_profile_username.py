@@ -7,13 +7,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0003_alter_profile_image'),
+        ("users", "0003_alter_profile_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='profile',
-            name='username',
-            field=models.CharField(default='default', max_length=255, validators=[django.contrib.auth.validators.ASCIIUsernameValidator]),
+            model_name="profile",
+            name="username",
+            field=models.CharField(
+                default="default",
+                max_length=255,
+                validators=[django.contrib.auth.validators.ASCIIUsernameValidator],
+            ),
         ),
     ]
