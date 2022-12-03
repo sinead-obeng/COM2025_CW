@@ -1,10 +1,31 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import PasswordChangeView
 from django.shortcuts import render, redirect
-from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from django.urls import reverse_lazy
+from .forms import (
+    UserRegisterForm,
+    UserUpdateForm,
+    ProfileUpdateForm,
+    PasswordResetForm,
+)
 
 
 # Create your views here.
+def forgot(request):
+    if request.method == "POST":
+        form = PasswordResetForm(request.POST)
+        if form.is_valid():
+            messages.success(
+                request,
+                f"We've sent you an email containing a link that will allow you to reset your password. Once you receive the email follow the instructions to change your password.",
+            )
+            return redirect("forgot")
+    else:
+        form = PasswordResetForm()
+    return render(request, "users/forgot.html", {"form": form})
+
+
 def register(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
@@ -33,9 +54,7 @@ def profile(request):
         if user_update_form.is_valid() and profile_update_form.is_valid():
             user_update_form.save()
             profile_update_form.save()
-            messages.success(
-                request, f"Your account has been updated!"
-            )
+            messages.success(request, f"Your account has been updated!")
             return redirect("profile")
     else:
         user_update_form = UserUpdateForm(instance=request.user)
@@ -43,6 +62,6 @@ def profile(request):
 
     context = {
         "user_update_form": user_update_form,
-        "profile_update_form": profile_update_form
+        "profile_update_form": profile_update_form,
     }
     return render(request, "users/profile.html", context)

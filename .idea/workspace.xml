@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Fix ups and touch ups">
+    <list default="true" id="45136525-8f6a-4209-af73-d0330fa951ec" name="Changes" comment="Create Favourites model">
+      <change afterPath="$PROJECT_DIR$/projectsite/users/templates/users/forgot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsite/music/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/music/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/home/static/home/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/home/static/home/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/projectsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/projectsite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsite/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsite/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +272,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670079205942</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Create Favourites model">
+      <created>1670086333802</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670086333802</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Create Favourites model">
+      <created>1670086356169</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670086356169</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,6 +322,7 @@
     <MESSAGE value="Little tweaks" />
     <MESSAGE value="Added a mailer and tests for the mailer" />
     <MESSAGE value="Fix ups and touch ups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix ups and touch ups" />
+    <MESSAGE value="Create Favourites model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Favourites model" />
   </component>
 </project>

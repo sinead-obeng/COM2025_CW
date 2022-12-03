@@ -5,15 +5,15 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Login</legend>
-                <p>Welcome back! Login to access</p>
+                <legend class="border-bottom mb-4">Forgot your password</legend>
+                <p>Reset your password to gain access to your account.</p>
                 <small class="text-muted">
-                Did you<a class="ml-1" href="{% url 'forgot' %}">forget your password?</a>
+                Already<a class="ml-1" href="{% url 'login' %}">know your password?</a>
                 </small>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">CONTINUE</button>
+                <button class="btn btn-outline-info" type="submit">SUBMIT</button>
             </div>
         </form>
         <div class="border-top pt-3">
