@@ -75,3 +75,10 @@ class Song(models.Model):
 
     def __str__(self):
         return self.song_title
+
+
+class Favourites(models.Model):
+    song_title = models.ForeignKey(Song, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.song_title
